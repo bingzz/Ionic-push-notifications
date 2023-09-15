@@ -1,12 +1,17 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import { CapacitorConfig } from '@capacitor/cli'
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
+  appId: 'push.notif.android',
   appName: 'pushNotifications',
   webDir: 'www',
   server: {
     androidScheme: 'https'
+  },
+  plugins: {
+    PushNotifications: {
+      presentationOptions: ['badge', 'sound', 'alert']
+    }
   }
-};
+}
 
-export default config;
+export default config

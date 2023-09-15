@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">pushNotifications</string>
+    <string name="title_activity_main">pushNotifications</string>
+    <string name="package_name">push.notif.android</string>
+    <string name="custom_url_scheme">push.notif.android</string>
+</resources>

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { IonicModule } from '@ionic/angular';
+import { Component } from '@angular/core'
+import { IonicModule, Platform } from '@ionic/angular'
+import { FcmService } from './services/fcm.service'
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,12 @@ import { IonicModule } from '@ionic/angular';
   imports: [IonicModule],
 })
 export class AppComponent {
-  constructor() {}
+  constructor (private platform: Platform, private fcm: FcmService) {
+    this.platform.ready()
+      .then(() => {
+        this.fcm.initPush()
+      }).catch(e => {
+        console.log(e)
+      })
+  }
 }
